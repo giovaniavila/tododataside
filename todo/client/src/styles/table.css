@@ -1,0 +1,37 @@
+.table {
+  display: grid;
+  gap: 20px;
+}
+
+.elementable {
+  display: flex;
+  justify-content: space-between;
+}
+.elementable th,
+.elementable td {
+  position: relative;
+}
+.elementable th::before,
+.elementable td::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 15px;
+  background-color: #5277c8;
+  position: absolute;
+  top: 1;
+  left: -10px;
+}
+
+.element-body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+}
+
+/*# sourceMappingURL=table.css.map */

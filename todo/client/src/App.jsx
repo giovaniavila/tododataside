@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './styles/form.css'
+import './styles/global.css'
 import '@fortawesome/fontawesome-free/css/all.css';
 import axios from 'axios';
 import dataside from './assets/dataside.png'

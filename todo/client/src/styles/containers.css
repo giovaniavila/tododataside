@@ -1,0 +1,22 @@
+.container-avo {
+  max-width: 1500px;
+  height: 600px;
+  background-color: white;
+  width: 800px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.container-pai {
+  height: 600px;
+  width: 700px;
+  background-color: white;
+}
+
+/*# sourceMappingURL=containers.css.map */
