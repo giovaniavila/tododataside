@@ -1,5 +1,5 @@
 const express = require('express')
-const { createDB, createTable, createList, showTodos, singleTodo, updateTodo, deleteSingleTodo } = require('../controllers/todoController.jsx')
+const { createDB, createTable, createList, showTodos, singleTodo, updateTodo, deleteSingleTodo, createTableLixeira } = require('../controllers/todoController.jsx')
 const router = express.Router()
 
 router.get('/create/database', createDB)
