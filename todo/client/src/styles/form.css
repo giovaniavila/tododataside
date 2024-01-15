@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% da altura da viewport */
+  margin: 0; /* Remover margens padrão do body */
+  background: #fafafa;
+  font-family: "Roboto", sans-serif;
+} 
+
+*{
+  padding: 0%;
+}
+
+.container-avo {
+    max-width: 1500px;
+    height: 600px;
+    background-color: white;
+    width: 800px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */ 
+}
+
+.container-pai {
+  height: 600px;
+  width: 700px;
+  background-color: white;
+  /* border: 1px solid red; */
+}
+
+
+.titulo {
+  text-align: start;
+  margin-bottom: 1.5em;
+  margin-left: -3%;
+  font-family: "Oswald", sans-serif;
+  background: linear-gradient(to right, #1e4c96, #5277C8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.form{
+  margin-right: -3%;
+  margin-left: -3%;
+  padding: 0%;
+  text-align: start;
+  margin-bottom: 5em;
+}
+
+.input {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input:hover,
+.input:focus {
+  border-color: #5277C8;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid #5277C8;
+  background-color: #5277C8;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #5277C8;
+}
+
+
+
+
+
+
+
+
+
+
+
+.table{
+  display: grid;
+  gap: 20px;
+}
+
+.elementable{
+  display: flex;
+  justify-content: space-between;
+}
+
+.elementable th,
+.elementable td {
+  position: relative;
+}
+
+.elementable th::before,
+.elementable td::before {
+  content: "";
+  display: block;
+  width: 5px; 
+  height: 15px; 
+  background-color: #5277C8; 
+  position: absolute;
+  top: 1;
+  left: -10px; 
+}
+
+.element-body{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.icons{
+  display: flex;
+  gap: 14px;
+}
+
+

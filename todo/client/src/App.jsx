@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/form.css'
 import '@fortawesome/fontawesome-free/css/all.css';
 import axios from 'axios';
+import dataside from './assets/dataside.png'
 
 function App() {
   const[editMode, setEditMode] = useState(false)
@@ -79,51 +78,53 @@ function App() {
   useEffect(() => {showTodos()}, [])
 
   return (
-    <>
-     <h1>Nodejs react mysql</h1>
-     <section className='container'>
-      <div className='form' style={{paddingBottom: "50px", paddingTop: "50px"}}>
-        <form onSubmit={editMode ? editTodo : addToDo}>
-          <div className='form-wrapper' style={{display: "flex", justifyContent:"space-between"}}>
-            <div style={{flex: 1, marginRight:"10px"}}>
-              <input onChange={(e) => setTask(e.target.value)} value={task} className='form-control' type='text' placeholder='Tasks' name='task' />
+    <div className='container-avo'>
+     <div className='container-pai'>
+       <h1 className='titulo'><img src={dataside} alt="" /> TODO </h1>
+       <section className='container'>
+        <div className='form'>
+          <form onSubmit={editMode ? editTodo : addToDo}>
+            <div className='form-wrapper' style={{display: "flex", justifyContent:"space-between"}}>
+              <div style={{flex: 1, marginRight:"10px"}}>
+                <input  onChange={(e) => setTask(e.target.value)} value={task} className='input' type='text' placeholder='Tasks' name='task' />
+              </div>
+              {
+                editMode ?
+                  <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn'>Editar</button>
+                  :
+                  <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn '>Adicionar task</button>
+              }
             </div>
-            {
-              editMode ? 
-                <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn btn-succes'>Editar</button>
-                :
-                <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn btn-succes'>Adicionar task</button>
-            }
+          </form>
+        </div>
+
+        <table className='table'>
+          <div>
+            <thead className='elementable'>
+                <th scope='col'>Ordem</th>
+                <th scope='col'>Task</th>
+                <th scope='col'>Actions</th>
+            </thead>
           </div>
-        </form>
-      </div>
+          <tbody>
+          {
+            Array.isArray(list) && list.map(d => (
+            <tr key={d.id} className='element-body'>
+              <th scope='row'>{d.id}</th>
+              <td>{d.task}</td>
+              <td className='icons'>
+                <i onClick={() => {showSingleToDo(d.id)}} className='fa-solid fa-pen-to-square' style={{color: '#5277C8', cursor: 'pointer'}}></i>
+                <i onClick={() => {deleteToDo(d.id)}} style={{color: "red", cursor:"pointer"}} className='fa-solid fa-trash-can'></i>
+              </td>
+            </tr>
+            ))
+          }
+          </tbody>
+        </table>
 
-      <table className='table'>
-        <thead>
-          <tr>
-            <th scope='col'>#</th>
-            <th scope='col'>task</th>
-            <th scope='col'>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-        {
-          Array.isArray(list) && list.map(d => (
-          <tr key={d.id}>
-            <th scope='row'>{d.id}</th>
-            <td>{d.task}</td>
-            <td>
-              <i onClick={() => {showSingleToDo(d.id)}} className='fa-solid fa-pen-to-square' style={{color: 'green', cursor: 'pointer'}}></i>
-              <i onClick={() => {deleteToDo(d.id)}} style={{color: "red", cursor:"pointer"}} className='fa-solid fa-trash-can'></i>
-            </td>
-          </tr>
-          ))
-        }
-        </tbody>
-      </table>
-
-     </section>
-    </>
+       </section>
+     </div>
+    </div>
   )
 }
 
