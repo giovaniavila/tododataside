@@ -90,9 +90,9 @@ function App() {
               </div>
               {
                 editMode ?
-                  <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn'>Editar</button>
+                  <button type="submit"  className='btn'>Editar</button>
                   :
-                  <button type="submit" style={{width: "200px", marginLeft:"10px"}} className='btn '>Adicionar task</button>
+                  <button type="submit"  className='btn '>Adicionar task</button>
               }
             </div>
           </form>
