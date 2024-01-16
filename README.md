@@ -40,26 +40,59 @@ Desafio proposto pela empresa Dataside com o objetivo de criar uma todoList util
 2) Dentro do editor de código pressione `Ctrl + J` e navegue até a pasta `client`. Instale as dependências com o comando `npm i`.
 
 3) Repita o passo anterior, mas agora indo no diretório `server` e igualmente instale com `npm i`.
+5) Vá até `server/db/database.jsx` e coloque sua senha do mysql, se houver
+6) Copie e cole a seguinte query no seu MySQL Workbench
 
-4) Com as dependências instaladas, você deve digitar `npm run dev` no diretório `client` e `npm start` no diretório `server`. Certifique-se de que você tenha o MySQL instalado na sua máquina.
+ ```
+   -- Criação do Banco de Dados
+CREATE DATABASE IF NOT EXISTS todo;
+
+-- Seleção do Banco de Dados
+USE todo;
+
+-- Criação da Tabela 'todos'
+CREATE TABLE IF NOT EXISTS todos (
+    id INT AUTO_INCREMENT,
+    task VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+-- Criação da Tabela 'lixeira'
+CREATE TABLE IF NOT EXISTS lixeira (
+    id INT AUTO_INCREMENT,
+    task VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+-- Inserção de dados na tabela 'todos' (exemplo)
+INSERT INTO todos (task) VALUES ('Contratar o Giovani');
+
+-- Adicione mais inserções conforme necessário
+
+-- Comandos SELECT para mostrar todos os registros nas tabelas
+SELECT * FROM todos;
+SELECT * FROM lixeira;
+```
+
+7) Com as dependências instaladas e o banco configurado, você deve digitar `npm run dev` no diretório `client` e `npm start` no diretório `server`. Certifique-se de que você tenha o MySQL rodando na sua máquina.
    
 <br>
-. <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
-.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ. <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ.  <br>
 <br>
 <br>
 
-![honkduck](https://github.com/giovaniavila/tododataside/assets/112128418/a793d253-c9c8-49ee-9d1a-4f2abbb6c6ad)
+ㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ![honkduck](https://github.com/giovaniavila/tododataside/assets/112128418/a793d253-c9c8-49ee-9d1a-4f2abbb6c6ad)
 
 <br>
 <br>
