@@ -40,7 +40,7 @@ body {
     margin-bottom: 10px;
   }
   .btn {
-    width: 50%;
+    width: 39%;
     height: 20%;
   }
 }
@@ -48,6 +48,8 @@ body {
   .container-avo {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    overflow-x: hidden;
+    padding: 2.2em;
   }
   .container-pai {
     width: 90%;
@@ -68,7 +70,7 @@ body {
     margin-bottom: 10px;
   }
   .btn {
-    width: 108%;
+    width: 99%;
     margin-bottom: 20px;
   }
   .table {
